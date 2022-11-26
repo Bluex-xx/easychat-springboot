@@ -1,0 +1,284 @@
+html, body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+
+}
+.bg_content {
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+    position: absolute;
+    background-image:url(/image/bg.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    transform: scale(1.5);
+}
+.wrapper_content{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    width: 700px;
+    height: 695px;
+    padding: 5px;
+    background-color: #f6f6f6;
+    border-radius:0 10px 10px 0;
+    opacity: 0.85;
+}
+
+#activeUserWraper {
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+#activeUserWraper span {
+    font-size: large;
+    color: grey;
+}
+
+.banner {
+    height: 50px;
+    width: 100%;
+}
+.banner span {
+    float: left;
+    display: inline-block;
+}
+.controls {
+    height: 150px;
+    margin: 5px 0px;
+    position: relative;
+}
+
+
+#historyMsg {
+    height: 400px;
+    background-color: #fff;
+    overflow: auto;
+    padding: 10px;
+}
+#historyMsg p {
+    font-size: 20px;
+}
+#historyMsg img {
+    max-width: 90%;
+
+}
+.timespan {
+    color: #ddd;
+    font-size: 16px;
+}
+.items {
+    height: 30px;
+    margin-bottom: 8px;
+}
+/*custom the file input*/
+
+.imageLable {
+    position: relative;
+}
+#sendImage {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+/*end custom file input*/
+
+#messageInput {
+    height: 170px;
+    max-height: 170px;
+    border: none;
+    background: #f6f6f6;
+}
+
+#emojiWrapper {
+    display: none;
+    width: 500px;
+    bottom: 105px;
+    position: absolute;
+    background-color: #f6f6f6;
+    box-shadow: 0 0 10px #555;
+    border-radius: 10px;
+}
+#emojiWrapper img {
+    margin: 5px;
+    padding: 2px;
+    width: 28px;
+    height: 25px;
+}
+#emojiWrapper img:hover {
+    background-color: grey;
+}
+
+.emoji{
+    display: inline;
+}
+footer {
+    text-align: center;
+}
+.message_content{
+    width: 993px;
+    overflow: hidden;
+    display: flex;
+}
+.leftbar
+{
+    width: 293px;
+    height: 695px;
+    background: #f6f6f6;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.9;
+}
+.sidebar_content {
+    width: 80px;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+}
+.three_dot {
+    width: 100%;
+    position: absolute;
+    top: .8vw;
+    display: flex;
+    height: 10px;
+    left: .5vw;
+}
+.item{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #e96b60;
+    margin-left: 7px;
+}
+.item:nth-child(2){
+    background-color: #f2c056;
+}
+.item:nth-child(3){
+    background-color: #61c559;
+}
+
+.user_pic {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    overflow: hidden;
+    left: calc((100% - 3vw) / 2);
+    top: 3.8vw;
+}
+.user_pic img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.btn_list {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 8vw;
+    display: flex;
+    flex-direction: column;
+}
+.btn_single{
+    width: 50px;
+    height: 50px;
+    margin: 6px 15px;
+    border-radius: 15px;
+    transition: all .2s;
+}
+.btn_single img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+.btn_single:hover,.btn_single:first-child{
+    background-color: rgb(128 128 128 / 9%);
+    transition: all .2s;
+}
+.title{
+    width: 66px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 3px solid #223bba9c;
+    color: rgba(0, 0, 0, 0.546);
+    position: absolute;
+    top: 13px;
+    left: 104px;
+    font-weight: 600;
+}
+.add {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 24px;
+    top: 20px;
+}
+.add img{
+    width: 100%;
+    height: 100%;
+}
+.search_input{
+    width: 163px;
+    height: 28px;
+    margin: 4% 1%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 24px;
+    top: 50px;
+    padding: 10px;
+}
+.user_single {
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 112px;
+    left: 96px;
+    position: relative;
+}
+.user_picx {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    left: 10px;
+    top: 6px;
+}
+.user_picx img{
+    width: 100%;
+    height: 100%;
+}
+
+.user_name
+{
+    width: 100px;
+    line-height: 30px;
+    position: absolute;
+    right: 23px;
+    top: 10px;
+    overflow: hidden;
+    color: grey;
+    font-size: 16px;
+}
+.user_single:hover,.user_single:first-child{
+    background: rgba(142, 196, 229, 0.283);
+}

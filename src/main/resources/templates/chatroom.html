@@ -1,0 +1,90 @@
+<html  xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>EasyChat - taking is more！</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+<div class="bg_content"></div>
+<div class="wrapper_content">
+   <div class="message_content">
+       <div class="leftbar">
+               <div class="sidebar_content">
+                   <div class="three_dot">
+                       <div class="item"></div>
+                       <div class="item"></div>
+                       <div class="item"></div>
+                   </div>
+                   <div class="user_pic">
+                       <img src="/image/home/user_pic.jpg">
+                   </div>
+                   <div class="btn_list">
+                       <div onclick="alert('别点啦，没用的')" class="btn_single"><img src="/image/home/Messages.png"></div>
+                       <div onclick="alert('别点啦，没用的')" class="btn_single"><img src="/image/home/user.png"></div>
+                       <div onclick="alert('别点啦，没用的')" class="btn_single"><img src="/image/home/setting.png"></div>
+                   </div>
+               </div>
+           <div class="title">Message</div>
+           <div class="add">
+               <img src="/image/home/add_user.png">
+           </div>
+           <input class="search_input"  type="text" placeholder="search">
+           <div class="user_single" style="background:rgba(142, 196, 229, 0.283) ;">
+               <div class="user_picx">
+                   <img src="/image/home/user_pic.jpg">
+               </div>
+               <div class="user_name">
+                   测试用户
+               </div>
+           </div>
+           <div class="user_single" style="margin-top: 10px">
+               <div class="user_picx">
+                   <img src="/image/home/user_pic.jpg">
+               </div>
+               <div class="user_name">
+                   测试用户
+               </div>
+           </div>
+           </div>
+       <div class="wrapper">
+           <div class="banner">
+               <div id="activeUserWraper">
+                   <span class="label label-info" id="status"></span><span class="label">位用户当前在线</span>
+               </div>
+           </div>
+           <div id="historyMsg">
+           </div>
+           <div class="controls">
+               <div class="items">
+                   <input id="uploadUrl" type="hidden" value="/upload/image">
+                   <input id="websocketUrl" type="hidden" value="/websocket">
+                   <input id="emojiBaseUri" type="hidden" value="/media/emoji/">
+                   <form id="sendImageForm" enctype="multipart/form-data" method="post">
+                       <input id="emoji" class="btn btn-primary" type="button" value="Emoji" title="发送表情"/>
+                       <label for="sendImage" class="imageLable">
+                           <input id="sendImageBtn" class="btn btn-success" type="button" value="Image" title="发送图片"/>
+                           <input id="sendImage" type="file" value="image" name="image" accept="image/jpg,image/jpeg,image/png,image/gif"/>
+                       </label>
+                       <input id="clearBtn" class="btn btn-danger" type="button" value="Clear" title="清除屏幕消息"/>
+                       <input id="myName" type="hidden" name="userName" th:value="${userName}">
+                   </form>
+               </div>
+               <textarea class="form-control" id="messageInput" placeHolder="Post by enter"></textarea>
+               <div id="emojiWrapper">
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+
+
+
+
+<script src="/js/jquery.js"></script>
+<script src="/js/sockjs.js"></script>
+<script src="/js/stomp.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/chatroom.js"></script>
+</body>
+</html>
